@@ -1,0 +1,103 @@
+[1] "assignment_00_YoungStephen.R"      "assignment_00_YoungStephen_Output"
+[1] "assignment_00_YoungStephen.R"      "assignment_00_YoungStephen_Output"
+[1] "C:/Users/young/Desktop/Classes/DSC520/Exercises/Week2/dsc520/assignments/assignment00"
+'data.frame':	5 obs. of  3 variables:
+ $ person_id    : chr  "dyer" "pb" "lake" "roe" ...
+ $ personal_name: chr  "William" "Frank" "Anderson" "Valentina" ...
+ $ family_name  : chr  "Dyer" "Pabodie" "Lake" "Roerich" ...
+'data.frame':	5 obs. of  3 variables:
+ $ person_id    : chr  "dyer" "pb" "lake" "roe" ...
+ $ personal_name: chr  "William" "Frank" "Anderson" "Valentina" ...
+ $ family_name  : chr  "Dyer" "Pabodie" "Lake" "Roerich" ...
+'data.frame':	5 obs. of  3 variables:
+ $ person_id    : chr  "dyer" "pb" "lake" "roe" ...
+ $ personal_name: chr  "William" "Frank" "Anderson" "Valentina" ...
+ $ family_name  : chr  "Dyer" "Pabodie" "Lake" "Roerich" ...
+'data.frame':	5 obs. of  3 variables:
+ $ person_id    : chr  "dyer" "pb" "lake" "roe" ...
+ $ personal_name: chr  "William" "Frank" "Anderson" "Valentina" ...
+ $ family_name  : chr  "Dyer" "Pabodie" "Lake" "Roerich" ...
+     Count           Score         Section         
+ Min.   :10.00   Min.   :200.0   Length:38         
+ 1st Qu.:10.00   1st Qu.:300.0   Class :character  
+ Median :10.00   Median :322.5   Mode  :character  
+ Mean   :14.47   Mean   :317.5                     
+ 3rd Qu.:20.00   3rd Qu.:357.5                     
+ Max.   :30.00   Max.   :395.0                     
+     Count           Score         Section         
+ Min.   :10.00   Min.   :200.0   Length:38         
+ 1st Qu.:10.00   1st Qu.:300.0   Class :character  
+ Median :10.00   Median :322.5   Mode  :character  
+ Mean   :14.47   Mean   :317.5                     
+ 3rd Qu.:20.00   3rd Qu.:357.5                     
+ Max.   :30.00   Max.   :395.0                     
+
+  There are binary versions available but the source versions are later:
+       binary source needs_compilation
+fansi   1.0.2  1.0.3              TRUE
+crayon  1.5.0  1.5.1             FALSE
+
+  Binaries will be installed
+package ‘glue’ successfully unpacked and MD5 sums checked
+package ‘cli’ successfully unpacked and MD5 sums checked
+package ‘utf8’ successfully unpacked and MD5 sums checked
+package ‘rematch’ successfully unpacked and MD5 sums checked
+package ‘ellipsis’ successfully unpacked and MD5 sums checked
+package ‘fansi’ successfully unpacked and MD5 sums checked
+package ‘lifecycle’ successfully unpacked and MD5 sums checked
+package ‘magrittr’ successfully unpacked and MD5 sums checked
+package ‘pillar’ successfully unpacked and MD5 sums checked
+package ‘pkgconfig’ successfully unpacked and MD5 sums checked
+package ‘rlang’ successfully unpacked and MD5 sums checked
+package ‘vctrs’ successfully unpacked and MD5 sums checked
+package ‘hms’ successfully unpacked and MD5 sums checked
+package ‘prettyunits’ successfully unpacked and MD5 sums checked
+package ‘R6’ successfully unpacked and MD5 sums checked
+package ‘cellranger’ successfully unpacked and MD5 sums checked
+package ‘Rcpp’ successfully unpacked and MD5 sums checked
+package ‘tibble’ successfully unpacked and MD5 sums checked
+package ‘progress’ successfully unpacked and MD5 sums checked
+package ‘readxl’ successfully unpacked and MD5 sums checked
+
+The downloaded binary packages are in
+	C:\Users\young\AppData\Local\Temp\Rtmp4ybUPz\downloaded_packages
+ [1] "Instructions"          "Voter Turnout"         "President"             "House of Rep"         
+ [5] "Co Clerk"              "Co Reg Deeds"          "Co Public Defender"    "Co Comm 1"            
+ [9] "Co Comm 3"             "Co Comm 5"             "Co Comm 7"             "St Bd of Ed 2"        
+[13] "St Bd of Ed 4"         "Legislature 5"         "Legislature 7"         "Legislature 9"        
+[17] "Legislature 11"        "Legislature 13"        "Legislature 23"        "Legislature 31"       
+[21] "Legislature 39"        "MCC 1"                 "MCC 2"                 "MCC 3"                
+[25] "MCC 4"                 "OPPD"                  "MUD"                   "NRD 3"                
+[29] "NRD 5"                 "NRD 7"                 "NRD 9"                 "OPS 2"                
+[33] "OPS 4"                 "OPS 6"                 "OPS 8"                 "OPS 10"               
+[37] "OPS 11"                "OPS 12"                "ESU 2"                 "ESU 3"                
+[41] "Arlington Sch 24"      "Bennington Sch 59"     "Elkhorn Sch 10"        "Fremont Sch 1"        
+[45] "Ft Calhoun Sch 3"      "Gretna Sch 37"         "Millard Sch 17"        "Ralston Sch 54"       
+[49] "Valley Sch 33"         "Waterloo Sch 11"       "Bennington Mayor"      "Elkhorn Mayor"        
+[53] "Valley Mayor"          "Ralston Mayor"         "Ralston Library Bd"    "Bennington City Cnc 1"
+[57] "Bennington City Cnc 2" "Elkhorn City Cnc A"    "Elkhorn City Cnc B"    "Elkhorn City Cnc C"   
+[61] "Ralston City Cnc 1"    "Ralston City Cnc 2"    "Ralston City Cnc 6"    "Waterloo Bd Trustees" 
+[65] "Valley City Cnc"       "Amendment 1"           "Amendment 2"           "Amendment 3"          
+[69] "Amendment 4"           "Initiative 417"        "Initiative 418"        "Initiative 419"       
+[73] "Initiative 420"       
+tibble [18 x 1] (S3: tbl_df/tbl/data.frame)
+ $ November 2, 2004 Presidential General Election: chr [1:18] "Official Results" NA NA NA ...
+ [1] "Instructions"          "Voter Turnout"         "President"             "House of Rep"         
+ [5] "Co Clerk"              "Co Reg Deeds"          "Co Public Defender"    "Co Comm 1"            
+ [9] "Co Comm 3"             "Co Comm 5"             "Co Comm 7"             "St Bd of Ed 2"        
+[13] "St Bd of Ed 4"         "Legislature 5"         "Legislature 7"         "Legislature 9"        
+[17] "Legislature 11"        "Legislature 13"        "Legislature 23"        "Legislature 31"       
+[21] "Legislature 39"        "MCC 1"                 "MCC 2"                 "MCC 3"                
+[25] "MCC 4"                 "OPPD"                  "MUD"                   "NRD 3"                
+[29] "NRD 5"                 "NRD 7"                 "NRD 9"                 "OPS 2"                
+[33] "OPS 4"                 "OPS 6"                 "OPS 8"                 "OPS 10"               
+[37] "OPS 11"                "OPS 12"                "ESU 2"                 "ESU 3"                
+[41] "Arlington Sch 24"      "Bennington Sch 59"     "Elkhorn Sch 10"        "Fremont Sch 1"        
+[45] "Ft Calhoun Sch 3"      "Gretna Sch 37"         "Millard Sch 17"        "Ralston Sch 54"       
+[49] "Valley Sch 33"         "Waterloo Sch 11"       "Bennington Mayor"      "Elkhorn Mayor"        
+[53] "Valley Mayor"          "Ralston Mayor"         "Ralston Library Bd"    "Bennington City Cnc 1"
+[57] "Bennington City Cnc 2" "Elkhorn City Cnc A"    "Elkhorn City Cnc B"    "Elkhorn City Cnc C"   
+[61] "Ralston City Cnc 1"    "Ralston City Cnc 2"    "Ralston City Cnc 6"    "Waterloo Bd Trustees" 
+[65] "Valley City Cnc"       "Amendment 1"           "Amendment 2"           "Amendment 3"          
+[69] "Amendment 4"           "Initiative 417"        "Initiative 418"        "Initiative 419"       
+[73] "Initiative 420"       
