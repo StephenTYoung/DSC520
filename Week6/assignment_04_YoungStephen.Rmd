@@ -1,0 +1,106 @@
+---
+title: "ASSIGNMENT 4"
+author: "Stephen Young"
+date: '2022-04-24'
+output:
+  word_document: default
+  html_document: default
+  pdf_document: default
+bibliography: bibliography.bib
+---
+
+# Markdown Basics
+
+## Favorite Foods
+
+1.  Pizza
+2.  Buttered Chicken
+3.  Ice Cream
+
+## Images
+
+![](C:/Users/young/Desktop/Classes/DSC520/GIT/completed/assignment04/plots/10-all-cases-log.png)
+
+## Add a Quote
+
+> "And wow! Hey! What's this thing suddenly coming towards me very fast? Very very fast. So big and flat and round, it needs a big wide sounding name like ... ow ... ound ... round ... ground! That's it! That's a good name -- ground! I wonder if it will be friends with me? And the rest, after a sudden wet thud, was silence." - Douglas Adams, Hitchhiker's Guide to the Galaxy
+
+## Add an Equation
+
+$x-5 = 10$
+
+## Add a Footnote
+
+`This is a footnote`
+
+## Add Citations
+
+---
+bibliography: bibliography.bib
+---
+
+-   R for Everyone [@lander2014r]
+-   Discovering Statistics Using R [@field2012discovering]
+
+# Inline Code
+
+```{r ggplot, setup, include = FALSE}
+require(knitr)
+knitr::opts_knit$set(root.dir ='C:/Users/young/Desktop/Classes/DSC520/GIT')
+heights_df <- read.csv("/data/r4ds/heights.csv")
+california_df <- covid_df[ which( covid_df$state == "California"), ]
+ny_df <- covid_df[ which( covid_df$state == "New York"), ]
+florida_df <- covid_df[ which( covid_df$state == "Florida"), ]
+```
+
+## NY Times COVID-19 Data
+
+```{r ggplot, echo=FALSE}
+ggplot(data=florida_df, aes(x=date, group=1)) +
+  geom_line(aes(y = cases, colour = "Florida")) +
+  geom_line(data=ny_df, aes(y = cases,colour="New York")) +
+  geom_line(data=california_df, aes(y = cases, colour="California")) +
+  scale_colour_manual("",
+                      breaks = c("Florida", "New York", "California"),
+                      values = c("darkred", "darkgreen", "steelblue")) +
+  xlab(" ") + ylab("Cases") + scale_y_log10()
+
+```
+
+## R4DS Height vs Earnings
+
+```{r ggplot, echo=FALSE}
+ggplot(data=florida_df, aes(x=date, group=1)) +
+  geom_line(aes(y = cases), color = "darkred") +
+  geom_line(data=ny_df, aes(y = cases), color="darkgreen") +
+  geom_line(data=california_df, aes(y = cases), color="steelblue")
+
+```
+
+# Tables
+
+```{r echo=FALSE, results='asis}
+library(knitr)
+library(kableExtra)
+name <- c("Aragon", "Bilbo", "Frodo", "Galadriel", "Sam", "Gandalf", "Legolas", "Sauron", "Gollum")
+race <- c("Men", "Hobbit", "Hobbit", "Elf", "Hobbit", "Maia", "Elf", "Maia", "Hobbit")
+in_fellowship <- c(TRUE, FALSE, TRUE, FALSE, TRUE, TRUE, TRUE, FALSE, FALSE)
+ring_bearer <- c(FALSE, TRUE, TRUE, FALSE, TRUE, TRUE, FALSE, TRUE, TRUE)
+age <- c(88, 129, 51, 7000, 36, 2019, 2931, 7052, 589)
+
+characters_df <- data.frame(name, race, in_fellowship, ring_bearer, age)
+characters_df
+```
+
+## Knitr Table with Kable
+```{r table, echo=FALSE, results='asis'}
+knitr::kable(head(characters_df), caption = "One Ring to Rule Them All", format="simple")
+```
+## Pandoc Table
+
+\`\`\`{r table, echo=FALSE, results='asis'} library(pander) pandoc.table(characters_df) \`\`\`\` \# References
+
+```{r table, echo=FALSE, results='asis'}
+library(pander)
+pandoc.table(characters_df)
+````
