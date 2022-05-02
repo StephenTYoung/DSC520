@@ -103,4 +103,4 @@ knitr::kable(head(characters_df), caption = "One Ring to Rule Them All", format=
 ```{r table, echo=FALSE, results='asis'}
 library(pander)
 pandoc.table(characters_df)
-````
+```

@@ -2,9 +2,10 @@
 # Name: Young, Steve
 # Date: 2022-04-23
 
-## Load the ggplot2 package
+## Load the ggplot2 package and knitr
 library(ggplot2)
 theme_set(theme_minimal())
+
 
 ## Set the working directory to the root of your DSC 520 directory
 setwd("C:/Users/young/Desktop/Classes/DSC520/GIT")
@@ -78,3 +79,8 @@ ggplot(data=florida_df, aes(x=date, group=1)) +
                       breaks = c("Florida", "New York", "California"),
                       values = c("darkred", "darkgreen", "steelblue")) +
   xlab(" ") + ylab("Cases") + scale_y_log10()
+
+#Print as PDF
+tinytex::install_tinytex()
+library(knitr)
+knitr::stitch('assignment_04_YoungStephen.R')
