@@ -1,0 +1,54 @@
+---
+title: "Final Project Step 1"
+output:
+  pdf_document: default
+date: '2022-05-15'
+---
+
+#Introduction
+
+The subject I would like to research would be mental health. Mental health within the country has been a real struggle to better understad it, to destigmitize it, and to find some causations. It could be a data science question because there is so much data out there about it and if we can find better understanding, we can help it in the future. 
+
+#Research questions
+
+* Is there a relation between the country, how happy it is and the number of suicides?
+* Does country and suicide have a correlation
+* Does having a Stand-alone law make a difference in the suicide rate of the country?
+* Does having a policy or plan make a difference with the sucide rate of the country?
+* Does GDP buy happiness?
+* Are certain ages more seseptable to suicide than others?
+* Are minorities in other countries more likely to commit suicide?
+
+#Approach
+
+I plan to look at all the variables and all of the different data to see what the difference is and relation between the variables. 
+
+#How your approach addresses (fully or partially) the problem.
+
+I plan to see which variables have the highest correlation between each other based on age, gender, country by going through each one and looking at regression data, plot points of suicide by age, etc. 
+
+#Data  (Minimum of 3 Datasets - but no requirement on number of fields or rows)
+
+>Helliwell, J. F.-E. (2022). World Happiness Report 2022. Retrieved from World Happiness Report: https://worldhappiness.report/ed/2022/#appendices-and-data
+Mental health governance. (2019, April 25). Retrieved from World Health Organization: https://apps.who.int/gho/data/node.main.MHPOLFIN?lang=en
+WHO Suicide Statistics. (n.d.). Retrieved from Kaggle: https://www.kaggle.com/datasets/szamil/who-suicide-statistics
+
+#Required Packages
+
+* readxl
+* ggplot2
+* lm
+* ppcor
+
+#Plots and Table Needs
+
+* I will do plots of the following:
+ +age and the number of suicides
+ +Happiness and number of suicides
+ +Policy and number of suicides
+ +laws and number of suicides
+ +GDP and Happiness
+
+#Questions for future step
+
+There is not anything that I do not know how to do yet, but there may be things that come up that I do not know how to do.

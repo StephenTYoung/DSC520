@@ -81,6 +81,6 @@ ggplot(data=florida_df, aes(x=date, group=1)) +
   xlab(" ") + ylab("Cases") + scale_y_log10()
 
 #Print as PDF
-tinytex::install_tinytex()
 library(knitr)
+setwd("C:/Users/young/Desktop/Classes/DSC520/GIT")
 knitr::stitch('assignment_04_YoungStephen.R')
