@@ -8,6 +8,9 @@ output:
   pdf_document: default
 bibliography: bibliography.bib
 ---
+```{r GlobalOptions}
+options(knitr.duplicate.label = 'allow')
+```
 
 # Markdown Basics
 
@@ -45,9 +48,7 @@ bibliography: bibliography.bib
 # Inline Code
 
 ```{r ggplot, setup, include = FALSE}
-require(knitr)
-knitr::opts_knit$set(root.dir ='C:/Users/young/Desktop/Classes/DSC520/GIT')
-heights_df <- read.csv("/data/r4ds/heights.csv")
+covid_df <- read.csv("C:/Users/young/Desktop/Classes/DSC520/GIT/data/nytimes/covid-19-data/us-states.csv")
 california_df <- covid_df[ which( covid_df$state == "California"), ]
 ny_df <- covid_df[ which( covid_df$state == "New York"), ]
 florida_df <- covid_df[ which( covid_df$state == "Florida"), ]
@@ -55,7 +56,8 @@ florida_df <- covid_df[ which( covid_df$state == "Florida"), ]
 
 ## NY Times COVID-19 Data
 
-```{r ggplot, echo=FALSE}
+```{r covcases,ggplot, echo=FALSE}
+library(ggplot2)
 ggplot(data=florida_df, aes(x=date, group=1)) +
   geom_line(aes(y = cases, colour = "Florida")) +
   geom_line(data=ny_df, aes(y = cases,colour="New York")) +
@@ -64,7 +66,6 @@ ggplot(data=florida_df, aes(x=date, group=1)) +
                       breaks = c("Florida", "New York", "California"),
                       values = c("darkred", "darkgreen", "steelblue")) +
   xlab(" ") + ylab("Cases") + scale_y_log10()
-
 ```
 
 ## R4DS Height vs Earnings
@@ -74,12 +75,11 @@ ggplot(data=florida_df, aes(x=date, group=1)) +
   geom_line(aes(y = cases), color = "darkred") +
   geom_line(data=ny_df, aes(y = cases), color="darkgreen") +
   geom_line(data=california_df, aes(y = cases), color="steelblue")
-
 ```
 
 # Tables
 
-```{r echo=FALSE, results='asis}
+```{r ringtable,echo=FALSE, results='asis'}
 library(knitr)
 library(kableExtra)
 name <- c("Aragon", "Bilbo", "Frodo", "Galadriel", "Sam", "Gandalf", "Legolas", "Sauron", "Gollum")
@@ -93,14 +93,19 @@ characters_df
 ```
 
 ## Knitr Table with Kable
-```{r table, echo=FALSE, results='asis'}
+```{r onering,table, echo=FALSE, results='asis'}
 knitr::kable(head(characters_df), caption = "One Ring to Rule Them All", format="simple")
 ```
 ## Pandoc Table
 
-\`\`\`{r table, echo=FALSE, results='asis'} library(pander) pandoc.table(characters_df) \`\`\`\` \# References
+```{r ringchar,table, echo=FALSE, results='asis'} 
+library(pander)
+pandoc.table(characters_df) 
+``` 
 
-```{r table, echo=FALSE, results='asis'}
+# References
+
+```{r ringref, table, echo=FALSE, results='asis'}
 library(pander)
 pandoc.table(characters_df)
 ```
